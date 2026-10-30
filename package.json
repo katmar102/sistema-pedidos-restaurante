@@ -1,0 +1,7 @@
+{
+  "name": "sistema-pedidos-restaurante",
+  "version": "1.0.0",
+  "description": "Sistema Modular de Gestion de Pedidos",
+  "type": "module",
+  "main": "main.js"
+}
