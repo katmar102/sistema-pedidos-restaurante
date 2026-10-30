@@ -1,16 +1,27 @@
 export const mesas = [
   {
-    mesa: 1,
-    pedidos: [
-      { plato: "Hamburguesa Clásica", cantidad: 2, precioUnitario: 18000 },
-      { plato: "Gaseosa 400ml", cantidad: 2, precioUnitario: 5000 }
+    numero: 1,
+    cliente: "Ana Pérez",
+    platillos: [
+      { nombre: "Bandeja Paisa", precio: 25000 },
+      { nombre: "Limonada Natural", precio: 5000 }
     ]
   },
   {
-    mesa: 2,
-    pedidos: [
-      { plato: "Perro Caliente Especial", cantidad: 1, precioUnitario: 15000 },
-      { plato: "Jugo Natural de Fruta", cantidad: 1, precioUnitario: 6000 }
+    numero: 2,
+    cliente: "Carlos Gómez",
+    platillos: [
+      { nombre: "Sancocho de Gallina", precio: 22000 },
+      { nombre: "Jugo de Maracuyá", precio: 6000 }
+    ]
+  },
+  // Nueva mesa agregada
+  {
+    numero: 3,
+    cliente: "María Rodríguez",
+    platillos: [
+      { nombre: "Ajiaco Santafereño", precio: 24000 },
+      { nombre: "Club Colombia", precio: 7000 }
     ]
   }
 ];
