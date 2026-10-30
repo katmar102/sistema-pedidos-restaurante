@@ -1,5 +1,5 @@
 export function agregarPlatillo(listaMesas, numeroMesa, nombrePlatillo, cantidad, precioUnitario) {
-  let mesaEncontrada = listaMesas.find(m => m.mesa === numeroMesa);
+  const mesaEncontrada = listaMesas.find(m => m.mesa === numeroMesa);
 
   if (mesaEncontrada) {
     mesaEncontrada.pedidos.push({
@@ -34,4 +34,16 @@ export function calcularCuenta(listaMesas, numeroMesa) {
     servicio: servicio,
     totalPagar: totalPagar
   };
+}
+
+export function agregarPlatillo(mesa, nombrePlatillo, precioPlatillo) {
+  mesa.platillos.push({ nombre: nombrePlatillo, precio: precioPlatillo });
+  console.log(`Platillo "${nombrePlatillo}" agregado a la mesa ${mesa.numero}.`);
+}
+
+export function calcularTotalConPropina(mesa) {
+  const subtotal = mesa.platillos.reduce((acc, p) => acc + p.precio, 0);
+  const propina = subtotal * 0.10;
+  const total = subtotal + propina;
+  return { subtotal, propina, total };
 }
